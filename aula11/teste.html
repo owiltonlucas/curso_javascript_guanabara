@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+</head>
+<body>
+    <h1>Verificação de nacionalidade</h1>
+    Digite seu país: <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Verificar" onclick="testar()">
+    <div id="olhar"></div>
+    <script>
+        function testar() {
+            var txt = window.document.getElementById('txt1').value
+            var val = window.document.getElementById('olhar')
+            val.innerHTML = `<p>Vivendo em ${txt}</p>`
+            if (txt == 'Brasil') {
+                val.innerHTML += 'Voce é brasileiro'
+            } else {
+                val.innerHTML += 'Voce é estrangeiro'
+            }
+
+        }
+    </script>
+</body>
+</html>
